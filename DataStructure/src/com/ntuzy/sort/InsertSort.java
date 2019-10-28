@@ -3,6 +3,9 @@ package com.ntuzy.sort;
 
 import java.util.Arrays;
 
+/**
+ * 插入排序
+ */
 public class InsertSort {
 
     public static void main(String[] args) {
