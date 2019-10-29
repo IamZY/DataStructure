@@ -132,6 +132,47 @@ public class InsertSort {
 
 ![1572248223813](https://github.com/IamZY/DataStructure/blob/master/images/1572248223813.png)
 
+```java
+package com.ntuzy.sort;
+
+import java.util.Arrays;
+
+/**
+ * 希尔排序
+ */
+public class ShellSort {
+    public static void main(String[] args) {
+        int[] arr = {11, 48, 15, 7};
+        sort(arr);
+    }
+
+    public static void sort(int[] arr) {
+        int len = arr.length;
+        int temp;
+        int gap = len / 2;
+        while (gap > 0) {
+            for (int i = gap; i < len; i++) {
+                int preIndex = i - gap; // 此时为0
+
+                temp = arr[i];
+                while (preIndex >= 0 && arr[preIndex] > temp) {
+                    arr[preIndex + gap] = arr[preIndex];
+                    preIndex -= gap;
+                }
+
+                arr[preIndex + gap] = temp;
+            }
+            gap /= 2;
+        }
+        
+        System.out.println(Arrays.toString(arr));
+        
+    }
+
+}
+
+```
+
 ## 栈和队列
 
 ### 栈
@@ -144,9 +185,25 @@ public class InsertSort {
 
 ![1572266032548](https://github.com/IamZY/DataStructure/blob/master/images/1572266032548.png)
 
+#### 优先级队列
 
+带排序的队列，与阻塞非阻塞队列没有关系
 
+## 链表
 
+链表的机制灵活，用途广泛，它适用于许多通用的数据库。它可以取代数组，并且可以作为其他数据结构的基础，如栈和队列。链表虽然不能解决数据存储中的所有问题，但他的应用范围很广。
+
+### 单链表
+
+单链表是一种链式存取的数据结构，用一组**地址任意**的存储单元存放线性表中的数据元素。链表中的数据是以结点来表示的，每个结点的构成：**元素**(数据元素的映象)
+
+**指针**(指示后继元素存储位置)，元素就是存储数据的存储单元，指针就是连接每个结点的地址数据。
+
+## 双端链表
+
+双端链表与传统链表非常相似，但是双端链表有一个新的特性：对最后一个链结点的引用。就像对第一个链结点的引用一样。
+
+对最后一个链结点的引用允许像在表头一样，在表尾直接插入一个链结点。当然，仍然可以在普通的单链表的表尾插入一个链结点，方法是遍历整个链表到达表尾，但是这种方法效率很低。
 
 
 

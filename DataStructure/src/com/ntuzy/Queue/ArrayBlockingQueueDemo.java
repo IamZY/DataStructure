@@ -2,7 +2,7 @@ package com.ntuzy.Queue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class Test1 {
+public class ArrayBlockingQueueDemo {
     public static void main(String[] args) {
         Producer p = new Producer();
         p.start();
