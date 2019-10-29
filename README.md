@@ -219,9 +219,65 @@ public class ShellSort {
 + 对于新增和删除操作add和remove，`LinedList`比较占优势，因为`ArrayList`要移动数据。 
 + 当操作是在一列数据的后面添加数据而不是在前面或中间,并且需要随机地访问其中的元素时,使用`ArrayList`会提供比较好的性能；当你的操作是在一列数据的前面或中间添加或删除数据,并且按照顺序访问其中的元素时,就应该使用`LinkedList`了。
 
+ArrayList和LinkedList在性能上各有优缺点，都有各自所适用的地方，总的说来可以描述如下：
 
++ 对ArrayList和LinkedList而言，在列表末尾增加一个元素所花的开销都是固定的。对ArrayList而言，主要是在内部数组中增加一项，指向所添加的元素，偶尔可能会导致对数组重新进行分配；而对LinkedList而言，这个开销是统一的，分配一个内部Entry对象。
++ 在ArrayList的中间插入或删除一个元素意味着这个列表中剩余的元素都会被移动；而在LinkedList的中间插入或删除一个元素的开销是固定的。
++ LinkedList不支持高效的随机元素访问。
++ ArrayList的空间浪费主要体现在在list列表的结尾预留一定的容量空间，而LinkedList的空间花费则体现在它的每一个元素都需要消耗相当的空间
 
+## 递归
 
++ 尾递归
+
+  ```java
+  package com.ntuzy;
+  
+  /**
+   * 伪递归
+   */
+  public class NumberTest {
+      public static void main(String[] args) {
+          System.out.println(getSum(5));
+          System.out.println(getX(5));
+          System.out.println(getX(5, 1));
+      }
+  
+      // 三角数字
+      public static int getSum(int n) {
+          int total = 0;
+          if (n == 1) {
+              return 1;
+          } else {
+              total = n + getSum(n - 1);
+              return total;
+          }
+      }
+  
+      // 阶乘
+      public static int getX(int n) {
+          if (n == 1) {
+              return 1;
+          } else {
+              int totle = n * getX(n - 1);
+              return totle;
+          }
+      }
+  
+      // 尾递归
+      public static int getX(int n, int a) {
+          if (n == 1) {
+              return a;
+          } else {
+              int total = getX(n - 1, n * a);
+              return total;
+          }
+      }
+  
+  }
+  ```
+
+  
 
 
 
