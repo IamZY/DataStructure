@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a793111e-dd69-47c2-a7e0-15233c603c32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/List/SingleLinkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/Queue/PriorityQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/List/SortedLinkTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/Queue/Test1$Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/Queue/Test1$Producer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/Queue/Test1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/Queue/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayBlockingQueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/DoubleLinkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/DoubleLinkTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/List1$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/List1$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/List1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/List/List1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -84,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="411">
+              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#658#659#0" expanded="true" />
@@ -96,6 +94,33 @@
                 <element signature="e#3265#3266#0" expanded="true" />
                 <element signature="e#3292#3293#0" expanded="true" />
                 <element signature="e#4322#4323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/SortedLinkTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <folding>
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/PriorityQueueDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/List/SingleLinkTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkedTest.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/List/SortedLinkTest.java" />
       </list>
     </option>
   </component>
@@ -214,15 +241,6 @@
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
               <item name="List" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="List" type="462c0819:PsiDirectoryNode" />
-              <item name="DoubleLinkTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -256,9 +274,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DoubleLinkTest">
+  <component name="RunManager" selected="Application.DoubleLinkedTest">
     <configuration name="DoubleLinkTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.List.DoubleLinkTest" />
+      <module name="DataStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ntuzy.List.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoubleLinkedTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.List.DoubleLinkedTest" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
@@ -296,19 +327,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.Queue.Test2" />
-      <module name="DataStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ntuzy.Queue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.Queue.Test3" />
       <module name="DataStructure" />
@@ -324,11 +342,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DoubleLinkedTest" />
         <item itemvalue="Application.DoubleLinkTest" />
         <item itemvalue="Application.SingleLinkTest" />
         <item itemvalue="Application.PriorityQueueDemo" />
         <item itemvalue="Application.Test3" />
-        <item itemvalue="Application.Test2" />
       </list>
     </recent_temporary>
   </component>
@@ -344,12 +362,12 @@
       <updated>1572229173239</updated>
       <workItem from="1572229174485" duration="3390000" />
       <workItem from="1572240920758" duration="4789000" />
-      <workItem from="1572264253508" duration="17209000" />
+      <workItem from="1572264253508" duration="21630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25388000" />
+    <option name="totallyTimeSpent" value="29809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -363,7 +381,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28470826" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28470826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,7 +403,7 @@
       <window_info anchor="right" id="Database" order="8" weight="0.32984033" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info active="true" anchor="right" id="Structure" order="11" sideWeight="0.50074965" visible="true" weight="0.16716567" />
+      <window_info anchor="right" id="Structure" order="11" sideWeight="0.50074965" weight="0.16716567" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,8 +544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="411">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#658#659#0" expanded="true" />
@@ -535,6 +553,29 @@
             <element signature="e#3265#3266#0" expanded="true" />
             <element signature="e#3292#3293#0" expanded="true" />
             <element signature="e#4322#4323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/SortedLinkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
           </folding>
         </state>
       </provider>
