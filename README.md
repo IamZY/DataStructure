@@ -277,7 +277,184 @@ ArrayList和LinkedList在性能上各有优缺点，都有各自所适用的地�
   }
   ```
 
-  
+### 二分查找
+
+![1572417492012](https://github.com/IamZY/DataStructure/blob/master/images/1572417492012.png)
+
+```java
+package com.ntuzy;
+
+/**
+ * 二分查找
+ */
+public class BinSearchTest {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        Integer index = binSearch(arr, 0, arr.length - 1, 2);
+        System.out.println(index);
+    }
+
+
+    public static Integer binSearch(int[] arr, int low, int high, int keyValue) {
+
+        if (low <= high) {
+            int mid = (low + high) / 2;
+            if (keyValue == arr[mid]) {
+                return mid;
+            } else if (keyValue < arr[mid]) {
+                return binSearch(arr, low, mid - 1, keyValue);
+            } else {
+                return binSearch(arr, mid + 1, high, keyValue);
+            }
+        } else {
+            return -1;
+        }
+
+    }
+
+}
+```
+
+### 归并排序
+
+**和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。**
+
+**归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（**Divide and Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并
+
+```java
+package com.ntuzy;
+
+import java.util.Arrays;
+
+public class MergeSorted {
+    public static void main(String[] args) {
+        int[] arr = {3, 8, 1, 0, 2, 33};
+        System.out.println(Arrays.toString(megerSort(arr)));
+    }
+
+    // 将整个数组进行一个递归式的分割治理
+    public static int[] megerSort(int[] arr) {
+        if (arr.length < 2) {
+            return arr;
+        }
+        int mid = arr.length / 2;
+        // 包含头不包含尾
+        int[] left = Arrays.copyOfRange(arr, 0, mid);
+        int[] right = Arrays.copyOfRange(arr, mid, arr.length);
+
+        return merge(megerSort(left), megerSort(right));
+    }
+
+
+    // 将两个排序好的数组合并为一个数组
+    public static int[] merge(int[] left, int[] right) {
+
+        int[] result = new int[left.length + right.length];
+        for (int index = 0, i = 0, j = 0; index < result.length; index++) {
+            if (i >= left.length) {
+                result[index] = right[j++];
+            } else if (j >= right.length) {
+                result[index] = left[i++];
+            } else if (left[i] > right[j]) {
+                result[index] = right[j++];
+            } else {
+                result[index] = left[i++];
+            }
+        }
+
+        return result;
+    }
+
+
+}
+```
+
+## 高级的排序算法
+
+### 快速排序
+
+**快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。**
+
+快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）
+
+```java
+package com.ntuzy.sort;
+
+import java.util.Arrays;
+import java.util.Map;
+
+public class QuickSort {
+
+    public static void main(String[] args) {
+        int[] arr = {11, 48, 15, 7};
+        int[] ints = quickSort(arr, 0, arr.length - 1);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    // 快排
+    public static int[] quickSort(int[] arr, int start, int end) {
+        //
+        int smallIndex = partition(arr, start, end);  // 最终这个位置是smallIndex的值
+        if (smallIndex > start) {
+            quickSort(arr, start, smallIndex - 1);
+        }
+
+        if (smallIndex < end) {
+            quickSort(arr, smallIndex + 1, end);
+        }
+        return arr;
+    }
+
+    // 分区操作
+    public static int partition(int[] arr, int start, int end) {
+        // 设定基准值
+        int pivot = (int) (start + Math.random() * (end - start + 1));
+        // 将基准移动到数组后面
+        Utils.swap(arr, pivot, end);
+        int smallIndex = start - 1;   // 比基准数大的索引角标 用于交换位置
+
+        for (int i = start; i <= end; i++) {
+            if (arr[i] <= arr[end]) {  // 将第i个元素与基准值进行对比
+                smallIndex++;
+                if (i > smallIndex) {
+                    Utils.swap(arr, i, smallIndex);
+                }
+            }
+        }
+
+        return smallIndex;
+    }
+
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
