@@ -428,11 +428,125 @@ public class QuickSort {
 }
 ```
 
+### 堆排序
+
+**堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。**
+
+```java
+package com.ntuzy.sort;
 
 
+public class HeapSort {
+    private static int len;
+
+    public static void main(String[] args) {
+
+    }
+
+    //
+    public static int[] heapSort(int[] arr) {
+        len = arr.length;
+        // 1 构建大顶堆  构建大顶堆中调整的递归方法
+        buildMaxHeap(arr);
+        // 2 将顶部的元素 与无序区的最后一个元素交换位置
+        while (len > 0) {
+            Utils.swap(arr, 0, len - 1);   // 0表示大顶元素 len-1表示最后一个元素
+            len--; // 无序区的长度减少一位
+            changeHeap(arr, 0);
+        }
+        return arr;
+    }
+
+    // 构建大顶堆
+    public static void buildMaxHeap(int[] arr) {
+        for (int i = len / 2; i < arr.length; i--) {
+            // 调整大顶堆
+            changeHeap(arr, i);
+        }
+    }
+
+    /**
+     * 调整大顶堆
+     *
+     * @param arr
+     * @param i
+     */
+    private static void changeHeap(int[] arr, int i) {
+
+        int maxIndex = i;
+        // 如果有左子树且左子树大于父节点  那么将最大指针指向左子树
+        if (i * 2 < len && arr[i] * 2 > arr[maxIndex]) {
+            maxIndex = i * 2;
+        }
+
+        // 如果有右子树且右子树大于父节点  那么将最大指针指向右子树
+        if (i * 2 + 1 < len && arr[i * 2 + 1] > arr[maxIndex]) {
+            maxIndex = i * 2 + 1;
+        }
+
+        // 如果父节点不是最大值 则将父节点与最大值进行交换 这样才能保证我们的父节点是最大的 构建成一个大顶堆
+        if (maxIndex != i) {
+            Utils.swap(arr, maxIndex, i);
+            changeHeap(arr, maxIndex);
+        }
 
 
+    }
 
+}
+```
+
+### 计数排序
+
+**计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。 作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数（局限性）。**
+
+计数排序(Counting sort)是一种稳定的排序算法。计数排序使用一个额外的数组C，其中第i个元素是待排序数组A中值等于i的元素的个数。然后根据数组C来将A中的元素排到正确的位置。它只能对整数进行排序。
+
+```java
+package com.ntuzy.sort;
+
+import java.util.Arrays;
+
+public class CountingSort {
+    public static void main(String[] args) {
+
+    }
+
+    public static int[] sort(int[] arr) {
+        int min = arr[0], max = arr[0];
+        for (int i = 0; i < arr.length; i++) {  // 找到最大最小的值
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        // 定义一个额外的数组
+        int[] bucket = new int[max - min + 1];
+
+        Arrays.fill(bucket, 0);
+        for (int i = 0; i < arr.length; i++) {
+            bucket[arr[i] - min]++;
+        }
+        //
+        int index = 0, i = 0;
+        while (index < arr.length) {
+            if (bucket[i] != 0) {
+                arr[index] = i + min;
+                bucket[i]--;
+                index++;
+            } else {
+                i++;
+            }
+        }
+
+        return arr;
+    }
+}
+```
 
 
 
