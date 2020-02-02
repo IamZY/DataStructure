@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a793111e-dd69-47c2-a7e0-15233c603c32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/sparseArray/SparseArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/dynamic/KnapsackProblem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/dynamic/KnapsackProblem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,103 +35,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TreeMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/TreeMain.java">
+      <file leaf-file-name="ArrayQueueDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayQueueDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="526">
+              <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/Tree.java">
+      <file leaf-file-name="SparseArray.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sparseArray/SparseArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#insert#0;class#Tree#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
-              <folding>
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1296#1297#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Path/Path.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-              <folding>
-                <element signature="e#1250#1251#0" expanded="true" />
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HanoiTower.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dac/HanoiTower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding>
-                <element signature="e#93#94#0" expanded="true" />
-                <element signature="e#111#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnapsackProblem.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dynamic/KnapsackProblem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" lean-forward="true" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StackX.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/StackX.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/Queue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/TreeMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3792">
-              <caret line="243" column="65" lean-forward="true" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
+            <state relative-caret-position="286">
+              <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -187,6 +108,9 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/Vertex/Graph.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/dac/HanoiTower.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/dynamic/KnapsackProblem.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sparseArray/SaprseArray.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sparseArray/SparseArray.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayQueueDemo.java" />
       </list>
     </option>
   </component>
@@ -199,11 +123,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="730" />
-    <option name="y" value="170" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="197" />
+    <option name="y" value="66" />
+    <option name="width" value="2200" />
+    <option name="height" value="1334" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -211,9 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,26 +152,37 @@
               <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="dac" type="462c0819:PsiDirectoryNode" />
+              <item name="Queue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic" type="462c0819:PsiDirectoryNode" />
+              <item name="sparseArray" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,13 +212,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KnapsackProblem">
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.Vertex.Graph" />
+  <component name="RunManager" selected="Application.ArrayQueueDemo">
+    <configuration name="ArrayQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.Queue.ArrayQueueDemo" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.Vertex.*" />
+          <option name="PATTERN" value="com.ntuzy.Queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -310,12 +243,12 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TreeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.tree.TreeMain" />
+    <configuration name="SparseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sparseArray.SparseArray" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.tree.*" />
+          <option name="PATTERN" value="com.ntuzy.sparseArray.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -331,19 +264,19 @@
       </extension>
     </configuration>
     <list>
-      <item itemvalue="Application.TreeMain" />
       <item itemvalue="Application.path" />
-      <item itemvalue="Application.Graph" />
       <item itemvalue="Application.HanoiTower" />
       <item itemvalue="Application.KnapsackProblem" />
+      <item itemvalue="Application.SparseArray" />
+      <item itemvalue="Application.ArrayQueueDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KnapsackProblem" />
+        <item itemvalue="Application.ArrayQueueDemo" />
+        <item itemvalue="Application.SparseArray" />
         <item itemvalue="Application.HanoiTower" />
+        <item itemvalue="Application.KnapsackProblem" />
         <item itemvalue="Application.path" />
-        <item itemvalue="Application.Graph" />
-        <item itemvalue="Application.TreeMain" />
       </list>
     </recent_temporary>
   </component>
@@ -366,15 +299,18 @@
       <workItem from="1572826400193" duration="12000" />
       <workItem from="1573262813203" duration="8630000" />
       <workItem from="1573348045990" duration="5475000" />
-      <workItem from="1574735355706" duration="8516000" />
+      <workItem from="1574735355706" duration="9111000" />
+      <workItem from="1574922827924" duration="6000" />
+      <workItem from="1580525627986" duration="1354000" />
+      <workItem from="1580609847632" duration="5010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75214000" />
+    <option name="totallyTimeSpent" value="82179000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="197" y="66" width="2200" height="1334" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -384,29 +320,29 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Maven Projects" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3851455" />
       <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3112745" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.13242188" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.15521978" />
       <window_info anchor="right" id="Database" order="8" weight="0.32984033" />
-      <window_info anchor="right" id="Structure" order="11" sideWeight="0.50074965" side_tool="true" visible="true" weight="0.18945312" />
+      <window_info anchor="right" id="Structure" order="11" sideWeight="0.50074965" side_tool="true" visible="true" weight="0.15430403" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3189135" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3189135" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
@@ -456,6 +392,76 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#insert#0;class#Tree#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3672">
+          <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
+          <folding>
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Path/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dac/HanoiTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="e#93#94#0" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/StackX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5832">
+          <caret line="243" column="65" lean-forward="true" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dynamic/KnapsackProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" lean-forward="true" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/TreeMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -538,16 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Queue/PriorityQueueDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/SingleLinkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5088">
@@ -559,11 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4728">
           <caret line="204" selection-start-line="204" selection-end-line="204" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4289#4290#0" expanded="true" />
-            <element signature="e#4322#4323#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,13 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1464">
           <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/BinSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -694,15 +678,15 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/TreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3792">
-          <caret line="243" column="65" lean-forward="true" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
+        <state relative-caret-position="5016">
+          <caret line="243" column="65" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="1200">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#insert#0;class#Tree#0" />
@@ -720,14 +704,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/StackX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Vertex/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
+        <state relative-caret-position="3672">
+          <caret line="157" column="33" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
           <folding>
             <element signature="e#936#937#0" expanded="true" />
             <element signature="e#981#982#0" expanded="true" />
@@ -739,32 +723,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Path/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-          <folding>
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1433#1434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dac/HanoiTower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="e#93#94#0" expanded="true" />
-            <element signature="e#111#112#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3312">
+          <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dynamic/KnapsackProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" lean-forward="true" selection-end-line="59" />
+        <state relative-caret-position="264">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/dac/HanoiTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#93#94#0" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sparseArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/BinSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Queue/PriorityQueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sparseArray/SparseArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayQueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
         </state>
       </provider>
     </entry>
