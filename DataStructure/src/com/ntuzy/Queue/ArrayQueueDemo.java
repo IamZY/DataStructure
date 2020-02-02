@@ -125,7 +125,7 @@ class ArrayQueue {
             System.out.println("Queue is empty..");
             throw new RuntimeException("队列空没有数据");
         }
-        return arr[front + 1]; 
+        return arr[front + 1];
     }
 
 
