@@ -189,6 +189,159 @@ public class ShellSort {
 
 ### 栈
 
++ 栈的英文为(stack)
++ 栈是一个**先入后出**(FILO-First In Last Out)的有序列表。
++ 栈(stack)是限制线性表中元素的插入和删除**只能在线性表的同一端**进行的一种特殊线性表。允许插入和删除的一端，为变化的一端，称为**栈顶**(Top)，另一端为固定的一端，称为**栈底**(Bottom)。
++ 根据栈的定义可知，最先放入栈中元素在栈底，最后放入的元素在栈顶，而删除元素刚好相反，最后放入的元素最先删除，最先放入的元素最后删除
+
+![image-20200203142528856](images/image-20200203142528856.png)
+![image-20200203142544319](images/image-20200203142544319.png)
+
+```java
+class ArrayStack {
+    private int maxSize; // 栈大小
+    private int[] stack;  // 数组模拟栈
+    private int top = -1;  // top表示栈顶
+
+    public ArrayStack(int maxSize) {
+        this.maxSize = maxSize;
+        stack = new int[this.maxSize];
+    }
+
+
+    public boolean isFull() {
+        if (top == maxSize - 1) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+
+    public void push(int value) {
+        if (isFull()) {
+            return;
+        }
+
+        this.stack[++top] = value;
+    }
+
+    public int pop() {
+
+        if (isEmpty()) {
+            throw new RuntimeException("stack empty");
+        }
+
+        int value = this.stack[top];
+        top--;
+        return value;
+    }
+
+
+    // 需要从栈顶开始显示
+    public void display() {
+        if (isEmpty()) {
+            return;
+        }
+
+        for (int i = top; i >= 0; i--) {
+            System.out.printf("stack[%d] = %d\n", i, stack[i]);
+        }
+
+    }
+
+
+}
+```
+
+#### 前缀表达式
+
+#### 中缀表达式
+
++ 中缀转后缀
+
+  https://blog.csdn.net/sgbfblog/article/details/8001651
+
+#### 后缀表达式
+
+```java
+package com.ntuzy.Stack;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+/**
+ * @Author IamZY
+ * @create 2020/2/3 16:40
+ */
+public class PolandNotation {
+    public static void main(String[] args) {
+        // 数字和符号使用空格隔开
+        String suffixExpression = "3 4 + 5 * 6 - ";  // (3+4)*5-6
+
+
+        List<String> list = getListString(suffixExpression);
+        System.out.println(list);
+
+        System.out.println(calculate(list));
+
+    }
+
+    // 将一个逆波兰表达式
+    public static List<String> getListString(String suffixExpression) {
+        String[] split = suffixExpression.split(" ");
+
+        List<String> list = new ArrayList<>();
+
+
+        for (String ele : split) {
+            list.add(ele);
+        }
+
+        return list;
+    }
+
+    // 完成对逆波兰表达式的运算
+    public static int calculate(List<String> ls) {
+        // 创建一个栈
+        Stack<String> stack = new Stack();
+
+        // 遍历list
+        for (String item : ls) {
+            // 使用正则表达式
+            if (item.matches("\\d+")) {
+                stack.push(item);
+            } else {
+                int num2 = Integer.parseInt(stack.pop());
+                int num1 = Integer.parseInt(stack.pop());
+                int res = 0;
+                if (item.equals("+")) {
+                    res = num1 + num2;
+                } else if (item.equals("-")) {
+                    res = num1 - num2;
+                } else if (item.equals("*")) {
+                    res = num1 * num2;
+                } else if (item.equals("/")) {
+                    res = num1 / num2;
+                } else {
+                    throw new RuntimeException("运算符有错");
+                }
+                stack.push(res + "");
+            }
+        }
+
+
+        return Integer.parseInt(stack.pop());
+    }
+
+}
+
+```
+
 
 
 ### 队列
