@@ -17,18 +17,22 @@ public class SelectionSort {
             return;
         }
 
-        // 定义选择排序需要的轮数 数组的长度
-        for (int i = 0; i < arr.length; i++) {
+
+        for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
-            // 每一轮选择数据排序进行数据比较
-            for (int j = i; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
+            int min = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (min > arr[j]) {
+                    min = arr[j];
                     minIndex = j;
                 }
-
-                Utils.swap(arr, i, j);
             }
+
+            // 交换
+            arr[minIndex] = arr[i];
+            arr[i] = min;
         }
+
 
         System.out.println(Arrays.toString(arr));
 
