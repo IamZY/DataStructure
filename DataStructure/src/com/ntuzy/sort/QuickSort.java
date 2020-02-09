@@ -6,9 +6,10 @@ import java.util.Map;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] arr = {11, 48, 15, 7};
-        int[] ints = quickSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(ints));
+        int[] arr = {-9, 78, 24, 23, -567, 70};
+//        int[] ints = quickSort(arr, 0, arr.length - 1);
+//        System.out.println(Arrays.toString(ints));
+        System.out.println(Arrays.toString(quickSort2(arr, 0, arr.length - 1)));
     }
 
     // 快排
@@ -66,6 +67,65 @@ public class QuickSort {
             return pre;
         }
         return -1;
+    }
+
+
+    public static int[] quickSort2(int[] arr, int left, int right) {
+        int l = left;
+        int r = right;
+        int pivot = arr[(left + right) / 2];
+        int temp = 0;
+        while (l < r) {
+            // 在pivot左边一直找 找到大于等于pivot的值 才退出
+            while (arr[l] < pivot) {
+                l += 1;
+            }
+
+            while (arr[r] > pivot) {
+                r -= 1;
+            }
+
+            // 如果 l>=r成立 说明pivot左右两边的值已经按照左边全部都是小于等于pivot的值 右边大于等于pivot的值
+            if (l >= r) {
+                break;
+            }
+
+            // 交换
+            temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+
+            // 如果交换完后 发现arr[l] == pivot的值 r-- 前移
+            if (arr[l] == pivot) {
+                r -= 1;
+            }
+
+            // 如果交换完后 发现arr[] == pivot的值 l++ 前移
+            if (arr[r] == pivot) {
+                l += 1;
+            }
+        }
+
+        // 如果 l==r 必须l++ r-- 否则栈溢出
+        if (l == r) {
+            l += 1;
+            r -= 1;
+        }
+
+        // 向左递归
+        if (left < r) {
+            quickSort2(arr, left, r);
+        }
+
+        // 向右递归
+        if (right > l) {
+            quickSort2(arr, l, right);
+        }
+
+//        System.out.println(Arrays.toString(arr));
+
+        return arr;
+
     }
 
 

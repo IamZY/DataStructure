@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a793111e-dd69-47c2-a7e0-15233c603c32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/recursion/MiGong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/recursion/Queue8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/InsertSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/InsertSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/QuickSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/QuickSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/SelectionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/SelectionSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/ShellSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/sort/ShellSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,29 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArrayStackDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Stack/ArrayStackDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1968">
-              <caret line="84" selection-start-line="26" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Stack/Calculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PolandNotation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Stack/PolandNotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            <state relative-caret-position="1368">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +57,8 @@
       <file leaf-file-name="MiGong.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/recursion/MiGong.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+            <state relative-caret-position="1656">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -79,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/recursion/Queue8.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -87,17 +75,80 @@
       <file leaf-file-name="BubbleSort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="1512">
+              <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectionSort.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InsertSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+              <folding>
+                <element signature="method#sort#0;class#InsertSort#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShellSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="method#sort#0;class#ShellSort#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#quickSort#0;class#QuickSort#0" />
+                <element signature="method#partition#0;class#QuickSort#0" />
+                <element signature="method#PartSort#0;class#QuickSort#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MergetSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RadixSort.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+              <folding>
+                <element signature="method#sort#0;class#RadixSort#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectionSort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+            <state relative-caret-position="576">
+              <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+              <folding>
+                <element signature="method#sort#0;class#SelectionSort#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,9 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java" />
-        <option value="$PROJECT_DIR$/src/com/ntuzy/Stock.java" />
-        <option value="$PROJECT_DIR$/src/com/ntuzy/Stack.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/StackDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/Stack/StackDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/Stack/StackDemo.java" />
@@ -139,11 +187,9 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/ChangeTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/BinSearchTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/MergeSorted.java" />
-        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/HeapSort.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/CountingSort.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/BucketSort.java" />
-        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/tree/TreeMain.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/tree/Tree.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/Vertex/Queue.java" />
@@ -169,6 +215,11 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/recursion/Queue8.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java" />
       </list>
     </option>
   </component>
@@ -181,9 +232,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="212" />
-    <option name="y" value="40" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="231" />
+    <option name="y" value="31" />
     <option name="width" value="2200" />
     <option name="height" value="1334" />
   </component>
@@ -195,8 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,7 +348,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,7 +358,7 @@
     <property name="SearchEverywhereHistoryKey" value="setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;toString&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;constr&#9;ACTION&#9;GenerateConstructor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Algorithms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -330,49 +381,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SelectionSort">
-    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.Stack.Calculator" />
+  <component name="RunManager" selected="Application.RadixSort">
+    <configuration name="InsertSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.InsertSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.Stack.*" />
+          <option name="PATTERN" value="com.ntuzy.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="MiGong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.recursion.MiGong" />
+    <configuration name="MergetSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.MergetSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.recursion.*" />
+          <option name="PATTERN" value="com.ntuzy.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="PolandNotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.Stack.PolandNotation" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.QuickSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.Stack.*" />
+          <option name="PATTERN" value="com.ntuzy.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Queue8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.recursion.Queue8" />
+    <configuration name="RadixSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.RadixSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.recursion.*" />
+          <option name="PATTERN" value="com.ntuzy.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.SelectionSort" />
+    <configuration name="ShellSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.ShellSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
@@ -382,19 +433,19 @@
       </extension>
     </configuration>
     <list>
-      <item itemvalue="Application.Calculator" />
-      <item itemvalue="Application.PolandNotation" />
-      <item itemvalue="Application.MiGong" />
-      <item itemvalue="Application.Queue8" />
-      <item itemvalue="Application.SelectionSort" />
+      <item itemvalue="Application.InsertSort" />
+      <item itemvalue="Application.ShellSort" />
+      <item itemvalue="Application.QuickSort" />
+      <item itemvalue="Application.MergetSort" />
+      <item itemvalue="Application.RadixSort" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SelectionSort" />
-        <item itemvalue="Application.Queue8" />
-        <item itemvalue="Application.MiGong" />
-        <item itemvalue="Application.PolandNotation" />
-        <item itemvalue="Application.Calculator" />
+        <item itemvalue="Application.RadixSort" />
+        <item itemvalue="Application.MergetSort" />
+        <item itemvalue="Application.QuickSort" />
+        <item itemvalue="Application.ShellSort" />
+        <item itemvalue="Application.InsertSort" />
       </list>
     </recent_temporary>
   </component>
@@ -423,15 +474,18 @@
       <workItem from="1580609847632" duration="7242000" />
       <workItem from="1580633509221" duration="9138000" />
       <workItem from="1580697071629" duration="17193000" />
-      <workItem from="1580781042244" duration="12778000" />
+      <workItem from="1580781042244" duration="15546000" />
+      <workItem from="1580867536178" duration="1831000" />
+      <workItem from="1580954285345" duration="598000" />
+      <workItem from="1581214327731" duration="10977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123520000" />
+    <option name="totallyTimeSpent" value="139694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="231" y="31" width="2200" height="1334" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -444,18 +498,18 @@
       <window_info anchor="right" id="Maven Projects" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3101072" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30964053" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.13242188" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.21520147" />
       <window_info anchor="right" id="Database" order="8" weight="0.32984033" />
-      <window_info anchor="right" id="Structure" order="11" sideWeight="0.50074965" side_tool="true" visible="true" weight="0.13164063" />
+      <window_info anchor="right" id="Structure" order="11" sideWeight="0.50074965" side_tool="true" visible="true" weight="0.11172161" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29862174" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2982026" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -491,13 +545,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java</url>
-          <line>16</line>
+          <line>17</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java</url>
-          <line>48</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -525,6 +579,24 @@
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/MergeSorted.java</url>
           <line>25</line>
@@ -534,29 +606,15 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/TreeMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4872">
-          <caret line="237" column="65" lean-forward="true" selection-start-line="237" selection-start-column="65" selection-end-line="237" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="502" column="5" lean-forward="true" selection-start-line="502" selection-start-column="5" selection-end-line="502" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -599,9 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,16 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/HeapSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -664,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Queue/QueueDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -689,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -854,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/Stack/PolandNotation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="1368">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -864,22 +895,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/recursion/MiGong.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+        <state relative-caret-position="1656">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/recursion/Queue8.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -892,8 +916,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/SelectionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        <state relative-caret-position="576">
+          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+          <folding>
+            <element signature="method#sort#0;class#SelectionSort#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/InsertSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+          <folding>
+            <element signature="method#sort#0;class#InsertSort#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/ShellSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="method#sort#0;class#ShellSort#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#quickSort#0;class#QuickSort#0" />
+            <element signature="method#partition#0;class#QuickSort#0" />
+            <element signature="method#PartSort#0;class#QuickSort#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/MergetSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/RadixSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+          <folding>
+            <element signature="method#sort#0;class#RadixSort#0" />
+          </folding>
         </state>
       </provider>
     </entry>

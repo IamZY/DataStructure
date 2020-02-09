@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class InsertSort {
 
     public static void main(String[] args) {
-        int[] arr = {11, 48, 15, 7};
-        sort(arr);
+        int[] arr = {11, 7, 48, 15};
+        sort2(arr);
     }
 
 
@@ -32,6 +32,32 @@ public class InsertSort {
             }
             arr[preIndex + 1] = current;
         }
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+
+    public static void sort2(int[] arr) {
+
+
+        for (int i = 0; i < arr.length; i++) {
+            // 定义第一个插入的数
+            int insertVal = arr[i];
+            int insertIndex = i - 1; // arr[1] 的前面这个数的下标
+
+            // insertVal
+            // 保证在insertVal 找插入位置时不越界
+            // 说明待插入的数没有找到适当的位置
+            // 就需要将insertIndex 向后移动
+            while (insertIndex >= 0 && insertVal < arr[insertIndex]) {
+                arr[insertIndex + 1] = arr[insertIndex];
+                insertIndex--;
+            }
+
+            arr[insertIndex + 1] = insertVal;
+        }
+
 
         System.out.println(Arrays.toString(arr));
 

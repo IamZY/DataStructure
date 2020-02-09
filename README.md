@@ -15,6 +15,8 @@
 
 ## 简单的排序算法
 
+![image-20200209135737054](images/image-20200209135737054.png)
+
 ### 冒泡算法
 
 冒泡排序是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。
@@ -134,6 +136,30 @@ public class InsertSort {
         System.out.println(Arrays.toString(arr));
 
     }
+    
+    
+    public static void sort2(int[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            // 定义第一个插入的数
+            int insertVal = arr[i];
+            int insertIndex = i - 1; // arr[1] 的前面这个数的下标
+
+            // insertVal
+            // 保证在insertVal 找插入位置时不越界
+            // 说明待插入的数没有找到适当的位置
+            // 就需要将insertIndex 向后移动
+            while (insertIndex >= 0 && insertVal < arr[insertIndex]) {
+                arr[insertIndex + 1] = arr[insertIndex];
+                insertIndex--;
+            }
+
+            arr[insertIndex + 1] = insertVal;
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+    }
 
 }
 ```
@@ -141,8 +167,6 @@ public class InsertSort {
 ###   希尔排序
 
 希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序又叫缩小增量排序
-
-
 
 ```java
 package com.ntuzy.sort;
@@ -165,25 +189,263 @@ public class ShellSort {
         while (gap > 0) {
             for (int i = gap; i < len; i++) {
                 int preIndex = i - gap; // 此时为0
-
                 temp = arr[i];
                 while (preIndex >= 0 && arr[preIndex] > temp) {
                     arr[preIndex + gap] = arr[preIndex];
                     preIndex -= gap;
                 }
-
                 arr[preIndex + gap] = temp;
             }
             gap /= 2;
+        } 
+        System.out.println(Arrays.toString(arr)); 
+    }
+   
+     public static void sort2(int[] arr) {
+
+        for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < arr.length; i++) {
+                for (int j = i - gap; j >= 0; j -= gap) {
+                    // 如果当前元素大于加上步长的那个元素 说明交换
+                    if (arr[j] > arr[j + gap]) {
+                        int temp = arr[j];
+                        arr[j] = arr[j + gap];
+                        arr[j + gap] = temp;
+                    }
+                }
+            }
         }
-        
+
         System.out.println(Arrays.toString(arr));
-        
+     }
+}
+```
+
+### 快速排序
+
+**快**速排序（Quicksort）是对冒泡排序的一种改进。基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列
+
+```java
+public static int[] quickSort2(int[] arr, int left, int right) {
+        int l = left;
+        int r = right;
+        int pivot = arr[(left + right) / 2];
+        int temp = 0;
+        while (l < r) {
+            // 在pivot左边一直找 找到大于等于pivot的值 才退出
+            while (arr[l] < pivot) {
+                l += 1;
+            }
+
+            while (arr[r] > pivot) {
+                r -= 1;
+            }
+
+            // 如果 l>=r成立 说明pivot左右两边的值已经按照左边全部都是小于等于pivot的值 右边大于等于pivot的值
+            if (l >= r) {
+                break;
+            }
+
+            // 交换
+            temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+
+            // 如果交换完后 发现arr[l] == pivot的值 r-- 前移
+            if (arr[l] == pivot) {
+                r -= 1;
+            }
+
+            // 如果交换完后 发现arr[] == pivot的值 l++ 前移
+            if (arr[r] == pivot) {
+                l += 1;
+            }
+        }
+
+        // 如果 l==r 必须l++ r-- 否则栈溢出
+        if (l == r) {
+            l += 1;
+            r -= 1;
+        }
+
+        // 向左递归
+        if (left < r) {
+            quickSort2(arr, left, r);
+        }
+
+        // 向右递归
+        if (right > l) {
+            quickSort2(arr, l, right);
+        }
+
+//        System.out.println(Arrays.toString(arr));
+
+        return arr;
+
+    }
+```
+
+
+
+### 归并排序
+
+**归**并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（*divide-and-conquer*）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之)。
+
+![image-20200209120715164](images/image-20200209120715164.png)
+
+![image-20200209121144336](images/image-20200209121144336.png)
+
+![image-20200209121206050](images/image-20200209121206050.png)
+
+```java
+public class MergetSort {
+    public static void main(String[] args) {
+        int[] arr = {8, 4, 5, 7, 1, 3, 6, 2};
+        int[] temp = new int[arr.length];
+//        System.out.println(1 << 3);
+        mergeSort(arr, 0, arr.length - 1, temp);
+
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+
+    // 分+合
+    public static void mergeSort(int[] arr, int left, int right, int[] temp) {
+        if (left < right) {
+            int mid = (right + left) / 2;
+            // 先向左递归
+            mergeSort(arr, left, mid, temp);
+            // 向右递归分解
+            mergeSort(arr, mid + 1, right, temp);
+
+            // 到合并
+            merge(arr, left, mid, right, temp);
+        }
+    }
+
+
+    /**
+     * 合并
+     *
+     * @param arr   排序的原始数组
+     * @param left  左边后续徐立德初始索引
+     * @param mid   中间索引
+     * @param right 右边索引
+     * @param temp  左中转的数组
+     */
+    public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
+        int i = left;  // 初始化i 左边有序序列的索引
+        int j = mid + 1;
+        int t = 0;
+
+        // 先把左边两边的数据按照规则填充到temp数组
+        // 直到左右两边的有序序列 有一边处理完毕为止
+        while (i <= mid && j <= right) {
+            if (arr[i] <= arr[j]) {
+                temp[t] = arr[i];
+                t += 1;
+                i += 1;
+            } else {
+                temp[t] = arr[j];
+                t += 1;
+                j += 1;
+            }
+        }
+
+
+        // 把有剩余数据的一边的数据一次全部填充到temp
+        while (i <= mid) { // 左边的有序序列还有剩余的数组
+            temp[t] = arr[i];
+            t += 1;
+            i += 1;
+        }
+
+        while (j <= right) {
+            temp[t] = arr[j];
+            t += 1;
+            j += 1;
+        }
+
+
+        // 将temp数组元素拷贝到arr
+        t = 0;
+        int tempLeft = left;
+        while (tempLeft <= right) {
+            arr[tempLeft] = temp[t];
+            t += 1;
+            tempLeft += 1;
+        }
+
     }
 
 }
-
 ```
+
+
+
+### 基数排序
+
++ [基](https://baike.baidu.com/item/基数排序/7875498)[数排序](https://baike.baidu.com/item/基数排序/7875498)（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是通过键值的各个位的值，将要排序的[元素分配](https://baike.baidu.com/item/元素分配/2107419)至某些“桶”中，达到排序的作用
++ 基数排序法是属于稳定性的排序，基数排序法的是效率高的稳定性排序法
++ 基数排序(Radix Sort)是**[桶排序](http://www.cnblogs.com/skywang12345/p/3602737.html)**的扩展
++ 基数排序是1887年赫尔曼·何乐礼发明的。它是这样实现的：将整数按位数切割成不同的数字，然后按每个位数分别比较。
+
+```java
+public static void radixSort(int[] arr) {
+
+        // 根据前面的推导
+        // 得到数组中最大数的位数
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+
+        // 得到最大数的位数
+        int maxLength = (max + "").length();
+
+        for (int i = 0, n = 1; i < maxLength; i++, n *= 10) {
+            // 第i轮排序
+            // 定义一个 10 二维数组代表一个桶
+
+            int[][] bucket = new int[10][arr.length];
+
+            // 为了记录每个桶实际存放了多少个数据  我们定义一个一维数组记录每次放入的数据个数
+            // bucketElementCounts[0] 就是bucket[0] 放入数据的股份数
+            int[] bucketElementCounts = new int[10];
+
+            for (int j = 0; j < arr.length; j++) {
+                int digitOfElement = arr[j] / n % 10;
+                // 放入对应同
+                bucket[digitOfElement][bucketElementCounts[digitOfElement]] = arr[j];
+                bucketElementCounts[digitOfElement]++;
+            }
+            // 按照这个桶的的顺序 一维数组的下表一次取出数据 放入原来数组
+            int index = 0;
+            // 遍历每一桶 并将桶中数据放入到原数组中
+            for (int k = 0; k < bucketElementCounts.length; k++) {
+                // 如果桶中有数据 我们菜放入到原数组
+                if (bucketElementCounts[k] != 0) {
+                    // 循环该桶
+                    for (int l = 0; l < bucketElementCounts[k]; l++) {
+                        // 取出元素放入到arr
+                        arr[index++] = bucket[k][l];
+                    }
+                }
+                // 第i轮处理后 需要将每个buckElementCounts[k] 置 0
+                bucketElementCounts[k] = 0;
+            }
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+```
+
+
 
 ## 栈和队列
 
