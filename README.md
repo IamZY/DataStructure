@@ -1,4 +1,4 @@
-# 数据结构
+数据结构
 
 ## 稀疏数组
 
@@ -1021,9 +1021,13 @@ ArrayList和LinkedList在性能上各有优缺点，都有各自所适用的地�
   }
   ```
 
+## 查找算法
+
+### 线性查找
+
+逐个比对
+
 ### 二分查找
-
-
 
 ```java
 package com.ntuzy;
@@ -1039,79 +1043,212 @@ public class BinSearchTest {
     }
 
 
-    public static Integer binSearch(int[] arr, int low, int high, int keyValue) {
+   public static int binarySearch(int[] arr, int left, int right, int target) {
 
-        if (low <= high) {
-            int mid = (low + high) / 2;
-            if (keyValue == arr[mid]) {
-                return mid;
-            } else if (keyValue < arr[mid]) {
-                return binSearch(arr, low, mid - 1, keyValue);
-            } else {
-                return binSearch(arr, mid + 1, high, keyValue);
-            }
-        } else {
+        if (left > right) {
             return -1;
         }
 
+        int mid = (left + right) / 2;
+        int midVal = arr[mid];
+
+        if (target > midVal) {
+            return binarySearch(arr, mid + 1, right, target);
+        } else if (target < midVal) {
+            return binarySearch(arr, left, mid - 1, target);
+        } else {
+            return mid;
+        }
+
+    }
+    
+    
+    /**
+     * {1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 9}; 返回所有相同的数字索引
+     */
+    public static ArrayList binarySearch2(int[] arr, int left, int right, int target) {
+        if (left > right) {
+            return new ArrayList();
+        }
+
+        int mid = (left + right) / 2;
+        int midVal = arr[mid];
+
+        if (target > midVal) {
+            return binarySearch2(arr, mid + 1, right, target);
+        } else if (target < midVal) {
+            return binarySearch2(arr, left, mid - 1, target);
+        } else {
+            ArrayList resIndexList = new ArrayList<>();
+            int temp = mid - 1;
+            while (true) {
+                if (temp < 0 || arr[temp] != target) {
+                    break;
+                }
+                if (arr[temp] == target) {
+                    resIndexList.add(temp);
+                }
+                temp -= 1;
+            }
+            resIndexList.add(mid);
+            temp = mid + 1;
+            while (true) {
+                if (temp > arr.length - 1 || arr[temp] != target) {
+                    break;
+                }
+
+                if (arr[temp] == target) {
+                    resIndexList.add(temp);
+                }
+                temp += 1;
+            }
+
+            return resIndexList;
+        }    
+
+}
+```
+
+### 插值查找
+
++ 插值查找算法类似于二分查找，不同的是插值查找每次从**自适应****mid**处开始查找。
++ 将折半查找中的求mid 索引的公式 , low 表示左边索引left, high表示右边索引right.
+   key 就是前面我们讲的 findVal
+
+![image-20200210100858470](images/image-20200210100858470.png)
+
++ int mid = low + (high - low) * (key - arr[low]) / (arr[high] - arr[low]) ;/*插值索引*/
+   对应前面的代码公式：
+   int mid = left + (right – left) * (findVal – arr[left]) / (arr[right] – arr[left])
++ 注意
+  + 对于数据量较大，**关键字分布比较均匀**的查找表来说，采用**插值查找**,速度较快
+  + 关键字分布不均匀的情况下，该方法不一定比折半查找要好
+
+```java
+/**
+ * @Author IamZY
+ * @create 2020/2/10 10:13
+ */
+public class InsertValueSearch {
+    public static void main(String[] args) {
+        int[] arr = new int[100];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+
+        int index = insertValueSearch(arr, 0, arr.length - 1, 1);
+        System.out.println(index);
+
+    }
+
+    public static int insertValueSearch(int[] arr, int left, int right, int target) {
+        // target < arr[0] || target > arr[arr.length - 1] 必须设置
+        if (left > right || target < arr[0] || target > arr[arr.length - 1]) {
+            return -1;
+        }
+
+        int mid = left + (left + right) * (target - arr[left]) / (arr[right] - arr[left]);
+        int midVal = arr[mid];
+
+        if (target > midVal) {
+            return insertValueSearch(arr, mid + 1, right, target);
+        } else if (target < midVal) {
+            return insertValueSearch(arr, left, mid - 1, target);
+        } else {
+            return mid;
+        }
+
     }
 
 }
 ```
 
-### 归并排序
+### 黄金分割(**斐波那契**)查找
 
-和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。
+![image-20200210103521856](images/image-20200210103521856.png)
 
-归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并
-
-```java
-package com.ntuzy;
+ ```java
+package com.ntuzy.search;
 
 import java.util.Arrays;
 
-public class MergeSorted {
+/**
+ * @Author IamZY
+ * @create 2020/2/10 10:36
+ */
+public class FibonacciSearch {
+
+    public static int maxSize = 20;
+
     public static void main(String[] args) {
-        int[] arr = {3, 8, 1, 0, 2, 33};
-        System.out.println(Arrays.toString(megerSort(arr)));
+        int[] arr = new int[]{1, 8, 10, 89, 1000, 1234};
+        int index = fibSearch(arr, 10);
+        System.out.println(index);
     }
 
-    // 将整个数组进行一个递归式的分割治理
-    public static int[] megerSort(int[] arr) {
-        if (arr.length < 2) {
-            return arr;
+
+    // 非递归
+    public static int[] fibonacci() {
+        int[] f = new int[maxSize];
+        f[0] = 1;
+        f[1] = 1;
+        for (int i = 2; i < maxSize; i++) {
+            f[i] = f[i - 1] + f[i - 2];
         }
-        int mid = arr.length / 2;
-        // 包含头不包含尾
-        int[] left = Arrays.copyOfRange(arr, 0, mid);
-        int[] right = Arrays.copyOfRange(arr, mid, arr.length);
-
-        return merge(megerSort(left), megerSort(right));
+        return f;
     }
 
+    //
+    public static int fibSearch(int[] a, int key) {
+        int low = 0;
+        int high = a.length - 1;
+        int k = 0;
 
-    // 将两个排序好的数组合并为一个数组
-    public static int[] merge(int[] left, int[] right) {
+        int mid = 0;
+        int f[] = fibonacci();
+        // 获取到斐波那契分割数值小标
+        while (high > f[k] - 1) {
+            k++;
+        }
 
-        int[] result = new int[left.length + right.length];
-        for (int index = 0, i = 0, j = 0; index < result.length; index++) {
-            if (i >= left.length) {
-                result[index] = right[j++];
-            } else if (j >= right.length) {
-                result[index] = left[i++];
-            } else if (left[i] > right[j]) {
-                result[index] = right[j++];
+        // 因为f[k] 可能大于a的长度 因此我们需要使用Arrays类构造一个新的数组
+        // 不足的部分将会使用0填充
+        int[] temp = Arrays.copyOf(a, f[k]);
+
+        for (int i = high + 1; i < temp.length; i++) {
+            temp[i] = a[high];
+        }
+
+        while (low <= high) {
+            mid = low + f[k - 1] - 1;
+            if (key < temp[mid]) {
+                high = mid - 1;
+                //
+                // 因为前面又f[k-1]个元素 所以可以继续拆分f[k-1] = f[k - 2] + f[k - 3]
+                k--;
+            } else if (key > temp[mid]) {
+                low = mid + 1;
+                // f[k] = f[k-1] + f[k-2]
+                // 即 f[k-2]的前面查找 k-=2
+                k -= 2;
             } else {
-                result[index] = left[i++];
+                // find it
+                if (mid < high) {
+                    return mid;
+                }
+                if (mid > high) {
+                    return high;
+                }
             }
         }
 
-        return result;
+        return -1;
     }
 
-
 }
-```
+ ```
+
+
 
 ## 高级的排序算法
 
@@ -1953,7 +2090,9 @@ public class Tree234 {
 
 **哈希表是一种数据结构，他可以提供快速的插入和查找工作。哈希表运算的非常快，而且编程实现也比较容易。**
 
-**哈希表也有一些缺点：他是基于数组实现的，数组创建后难于扩展，某些哈希表被基本填满是，性能下降很快，所以使用之前需要明确数据量。**
+哈希表也有一些缺点：他是基于数组实现的，数组创建后难于扩展，某些哈希表被基本填满是，性能下降很快，所以使用之前需要明确数据量。
+
+![image-20200210111957052](images/image-20200210111957052.png)
 
 ### 哈希冲突解决策略
 
