@@ -1576,7 +1576,9 @@ public class RadixSort {
 }
 ```
 
-## 二叉树
+## 树
+
+### 二叉树
 
 二叉树是一种简单的树结构，每一个父节点下最多只能有两个子节点。
 
@@ -1881,7 +1883,7 @@ class Node {
 
  ```
 
-## 红黑树
+### 红黑树
 
 二叉树搜索有一个很麻烦的问题：
 
@@ -1899,7 +1901,7 @@ class Node {
 
 从根到叶节点或空子节点的每条路径，必须包含相同数目的黑色节点。
 
-## 2-3-4树
+### 2-3-4树
 
 在二叉树中，每个节点有一个数据项，最多有两个子节点。如果允许每个节点可以有更多的数据项和更多的子节点，就是多叉树。
 
@@ -2064,7 +2066,7 @@ public class Tree234 {
 }
 ```
 
-## 2-3树
+### 2-3树
 
 2-3**树和2-3-4树类似。**
 
@@ -2076,7 +2078,7 @@ public class Tree234 {
 
 2-3**树的节点分裂过程与2-3-4树大有不同，这里不再做过多介绍，有兴趣的同学可以作为拓展知识从网上进行搜索学习。**
 
-## B-树
+### B-树
 
 ### 插入
 
@@ -2093,6 +2095,138 @@ public class Tree234 {
 哈希表也有一些缺点：他是基于数组实现的，数组创建后难于扩展，某些哈希表被基本填满是，性能下降很快，所以使用之前需要明确数据量。
 
 ![image-20200210111957052](images/image-20200210111957052.png)
+
+### 例题
+
+**google**公司的一个上机题
+
+**有一个公司**当有新的员工来报道时*,***要求将该员工的信息加入**(id,性别,年龄,*名字*,*住址**..),*当输入该员工的*id***时**,要求查找到该员工的所有信息.
+
+```java
+// 创建hash表
+class HashTab {
+    EmpLinkedList[] empLinkedLists;
+    int size;
+
+    public HashTab(int size) {
+        this.size = size;
+        this.empLinkedLists = new EmpLinkedList[size];
+        // 分别初始化每一个链表
+        for (int i = 0; i < size; i++) {
+            empLinkedLists[i] = new EmpLinkedList();
+        }
+    }
+
+    public void add(Emp emp) {
+        // 根据员工id 得到该员工应该添加到哪条列表
+        int number = hashFun(emp.id);
+        // 将emp添加到对应
+        empLinkedLists[number].add(emp);
+    }
+
+    // 遍历所有链表
+    public void list() {
+        for (int i = 0; i < size; i++) {
+            empLinkedLists[i].list();
+        }
+    }
+
+    // 编写一个散列函数 使用简单的取模法
+    public int hashFun(int id) {
+        return id % size;
+    }
+
+    // 根据输入id 查找雇员
+    public void findEmpById(int id) {
+
+        int index = hashFun(id);
+
+        Emp emp = empLinkedLists[index].findById(id);
+
+        if (emp == null) {
+            System.out.println("没有找到雇员");
+        } else {
+            System.out.printf("找到雇员 信息=>%d,%s", emp.id, emp.name);
+        }
+
+    }
+
+}
+
+
+class Emp {
+    public int id;
+    public String name;
+    public Emp next;
+
+    public Emp(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+}
+
+// 创建EmpLinkedList
+class EmpLinkedList {
+    // 头指针 执行第一个Emp 因此我们这个链表的head是指向第一个Emp
+    private Emp head;
+
+    // 当添加雇员是id是自增的
+    // 因此我们将该雇员直接加入到本链表的最后即可
+    public void add(Emp emp) {
+        // 如果是添加第一个雇员
+        if (head == null) {
+            head = emp;
+            return;
+        }
+        // 如果不是添加第一个雇员
+        Emp curEmp = head;
+        while (true) {
+            if (curEmp.next == null) {
+                break;
+            }
+            curEmp = curEmp.next;
+        }
+        // 直接将emp加入链表
+        curEmp.next = emp;
+    }
+
+    // 遍历链表的雇员信息
+    public void list() {
+        if (head == null) {
+            return;
+        }
+
+        Emp curEmp = head;
+
+        while (curEmp != null) {
+            System.out.printf("=> id=%d name=%s\t", curEmp.id, curEmp.name);
+            curEmp = curEmp.next;
+        }
+        System.out.println();
+
+    }
+
+    public Emp findById(int id) {
+        if (head == null) {
+            return null;
+        }
+
+        Emp curEmp = head;
+
+        while (curEmp != null) {
+            if (curEmp.id == id) {
+                return curEmp;
+            }
+
+            curEmp = curEmp.next;
+        }
+
+        return null;
+    }
+
+}
+```
 
 ### 哈希冲突解决策略
 
@@ -2124,7 +2258,7 @@ public class Tree234 {
 
 比如说我有一堆数据**{1,12,26,337,353...}，而我的哈希算法是H(key)=key mod 16，第一个数据1的哈希值f(1)=1，插入到1结点的后面，第二个数据12的哈希值f(12)=12，插入到12结点，第三个数据26的哈希值f(26)=10，插入到10结点后面，第4个数据337，计算得到哈希值是1，遇到冲突，但是依然只需要找到该1结点的最后链结点插入即可，同理353。**
 
-![1573477062488](https://github.com/IamZY/DataStructure/blob/master/images/1573477062488.png)
+![1573477062488](images/1573477062488.png)
 
 #### 除法哈希法（**The Division Method）**
 

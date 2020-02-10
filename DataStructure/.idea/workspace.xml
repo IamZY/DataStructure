@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a793111e-dd69-47c2-a7e0-15233c603c32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/search/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/search/FibonacciSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/search/InsertValueSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/search/SeqSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/hashtab/HashTabDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
@@ -36,50 +33,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SeqSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/search/SeqSearch.java">
+      <file leaf-file-name="HashTabDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/hashtab/HashTabDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinarySearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/search/BinarySearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="61" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
+            <state relative-caret-position="648">
+              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertValueSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/search/InsertValueSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="43" column="1" lean-forward="true" selection-start-line="4" selection-end-line="43" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FibonacciSearch.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/search/FibonacciSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Arrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="3282" column="24" selection-start-line="3282" selection-start-column="24" selection-end-line="3282" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -100,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/test1.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/Test1.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/Test3.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/Queue/ArrayBlockingQueueDemo.java" />
@@ -151,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/search/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/search/InsertValueSearch.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/search/FibonacciSearch.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/hashtab/HashTabDemo.java" />
       </list>
     </option>
   </component>
@@ -203,14 +165,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -221,7 +175,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;toString&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;constr&#9;ACTION&#9;GenerateConstructor" />
+    <property name="SearchEverywhereHistoryKey" value="cons&#9;ACTION&#9;GenerateConstructor&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;toString&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;constr&#9;ACTION&#9;GenerateConstructor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Algorithms" />
@@ -247,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FibonacciSearch">
+  <component name="RunManager" selected="Application.HashTabDemo">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.search.BinarySearch" />
       <module name="DataStructure" />
@@ -268,22 +222,22 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="HashTabDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.hashtab.HashTabDemo" />
+      <module name="DataStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ntuzy.hashtab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="InsertValueSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.search.InsertValueSearch" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ntuzy.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="RadixSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.sort.RadixSort" />
-      <module name="DataStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ntuzy.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,19 +253,19 @@
       </extension>
     </configuration>
     <list>
-      <item itemvalue="Application.RadixSort" />
       <item itemvalue="Application.SeqSearch" />
       <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.InsertValueSearch" />
       <item itemvalue="Application.FibonacciSearch" />
+      <item itemvalue="Application.HashTabDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HashTabDemo" />
         <item itemvalue="Application.FibonacciSearch" />
         <item itemvalue="Application.InsertValueSearch" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.SeqSearch" />
-        <item itemvalue="Application.RadixSort" />
       </list>
     </recent_temporary>
   </component>
@@ -344,12 +298,12 @@
       <workItem from="1580867536178" duration="1831000" />
       <workItem from="1580954285345" duration="598000" />
       <workItem from="1581214327731" duration="11517000" />
-      <workItem from="1581298124544" duration="6378000" />
+      <workItem from="1581298124544" duration="9888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146612000" />
+    <option name="totallyTimeSpent" value="150122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="231" y="31" width="2200" height="1334" extended-state="0" />
@@ -365,7 +319,7 @@
       <window_info anchor="right" id="Maven Projects" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30964053" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30964053" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
@@ -376,7 +330,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2982026" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2982026" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -470,6 +424,12 @@
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/hashtab/HashTabDemo.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/MergeSorted.java</url>
           <line>25</line>
@@ -479,17 +439,10 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/SingleLinkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5088">
-          <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4728">
@@ -860,6 +813,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/hashtab/HashTabDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
