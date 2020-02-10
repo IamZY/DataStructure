@@ -2,6 +2,7 @@ package com.ntuzy.tree;
 
 public class TreeMain {
 
+    @SuppressWarnings("unused")
     public static void main(String[] args){
 
         Tree tree = new Tree();
