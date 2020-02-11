@@ -28,6 +28,12 @@ public class ThreadedBinaryTreeDemo {
         System.out.println(node3.getLeft());
         System.out.println(node3.getRight());
 
+        // 当线索化二叉树 不能使用原来的遍历方式
+//        bTree.infixOrder();
+
+        System.out.println();
+        bTree.threadedList();
+
     }
 }
 
@@ -49,6 +55,27 @@ class BTree {
     public void threadedNodes() {
         this.threadedNodes(this.root);
     }
+
+    // 遍历线索化二叉树的方法
+    public void threadedList() {
+        HeroNode node = root;
+        while (node != null) {
+            // 后面随着遍历而变化 因为当left == 1 的时候 说明该节点是按照线索化 处理后的有效节点
+            while (node.getLeftType() == 0) {
+                node = node.getLeft();
+            }
+
+            // 打印当前这个节点
+            System.out.println(node);
+
+            while (node.getRightType() == 1) {
+                node = node.getRight();
+                System.out.println(node);
+            }
+            node = node.getRight();
+        }
+    }
+
 
     // 编写对二叉树进行中序线索化的方法
     public void threadedNodes(HeroNode node) {

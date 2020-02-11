@@ -1891,6 +1891,12 @@ public class ThreadedBinaryTreeDemo {
         System.out.println(node3.getLeft());
         System.out.println(node3.getRight());
 
+        // 当线索化二叉树 不能使用原来的遍历方式
+//        bTree.infixOrder();
+
+        System.out.println();
+        bTree.threadedList();
+
     }
 }
 
@@ -1912,6 +1918,27 @@ class BTree {
     public void threadedNodes() {
         this.threadedNodes(this.root);
     }
+
+    // 遍历线索化二叉树的方法
+    public void threadedList() {
+        HeroNode node = root;
+        while (node != null) {
+            // 后面随着遍历而变化 因为当left == 1 的时候 说明该节点是按照线索化 处理后的有效节点
+            while (node.getLeftType() == 0) {
+                node = node.getLeft();
+            }
+
+            // 打印当前这个节点
+            System.out.println(node);
+
+            while (node.getRightType() == 1) {
+                node = node.getRight();
+                System.out.println(node);
+            }
+            node = node.getRight();
+        }
+    }
+
 
     // 编写对二叉树进行中序线索化的方法
     public void threadedNodes(HeroNode node) {
@@ -2233,6 +2260,216 @@ class HeroNode {
 }
 ```
 
+#### 堆排序
+
++ 堆排序是利用**堆**这种数据结构而设计的一种排序算法，堆排序是一种**选择排序，**它的最坏，最好，平均时间复杂度均为O(nlogn)，它也是不稳定排序。
++ 堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆, **注****意** : 没有要求结点的左孩子的值和右孩子的值的大小关系。
++ 每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆
++ 大顶堆举例说明
+
+![image-20200211140519745](images/image-20200211140519745.png)
+
+![image-20200211140700985](images/image-20200211140700985.png)
+
+```java
+package com.ntuzy.tree;
+
+import java.util.Arrays;
+
+/**
+ * @Author IamZY
+ * @create 2020/2/11 14:16
+ */
+public class HeapSort {
+    public static void main(String[] args) {
+        int arr[] = {4, 6, 8, 7, 5, 9};
+        heapSort(arr);
+    }
+
+    // 编写一个堆排序算法
+    public static void heapSort(int arr[]) {
+
+        // 分布完成
+//        adjustHeap(arr, 1, arr.length);
+//        System.out.println(Arrays.toString(arr));  // 4 9 8 5 6
+//
+//        adjustHeap(arr, 0, arr.length);
+//        System.out.println(Arrays.toString(arr));  // 9 6 8 5 4
+
+        for (int i = arr.length / 2 - 1; i >= 0; i--) {
+            adjustHeap(arr, i, arr.length);
+        }
+
+        int temp;
+        for (int i = arr.length - 1; i > 0; i--) {
+            temp = arr[i];
+            arr[i] = arr[0];
+            arr[0] = temp;
+            adjustHeap(arr, 0, i);
+        }
+
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    // 将一个数组(二叉树) 调整成一个大顶堆
+
+    /**
+     * 完成将 以 i 指向的对应的非叶子节点 调整成大顶堆
+     *
+     * @param arr
+     * @param i      标识非叶子节点在数组中的索引
+     * @param length
+     */
+    public static void adjustHeap(int[] arr, int i, int length) {
+        int temp = arr[i];
+        for (int k = i * 2 + 1; k < length; k = k * 2 + 1) {
+            if (k + 1 < length && arr[k] < arr[k + 1]) {
+                // 左子节点的值小于右子节点的值
+                k++; // k指向右子节点
+            }
+            if (arr[k] > temp) {
+                arr[i] = arr[k];
+                i = k;
+            } else {
+                break;
+            }
+        }
+
+        // for循环结束后 我们已经将i为父节点的树的最大值 放在了最顶
+        arr[i] = temp;
+    }
+
+}
+
+```
+
+### 哈夫曼树
+
++ 给定n个权值作为n个[叶子结点](https://baike.baidu.com/item/叶子结点/3620239)，构造一棵二叉树，若该树的带权路径长度(wpl)达到最小，称这样的二叉树为**最优二叉树**，也称为**哈夫曼树**(Huffman Tree)**, 还有的书翻译为**霍夫曼树。
++ 赫夫曼树是带权路径长度最短的树，权值较大的结点离根较近。
+
+![image-20200211150111642](images/image-20200211150111642.png)
+
+##### 构成赫夫曼树的步骤：
+
++ 从小到大进行排序, 将每一个数据，每个数据都是一个节点 ， 每个节点可以看成是一颗最简单的二叉树
++ 取出根节点权值最小的两颗二叉树
++ 组成一颗新的二叉树, 该新的二叉树的根节点的权值是前面两颗二叉树根节点权值的和 
++ 再将这颗新的二叉树，以根节点的权值大小 再次排序， 不断重复 1-2-3-4 的步骤，直到数列中，所有的数据都被处理，就得到一颗赫夫曼树
+
+```java
+package com.ntuzy.tree.huffmantree;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.TooManyListenersException;
+
+/**
+ * @Author IamZY
+ * @create 2020/2/11 15:08
+ */
+public class HuffmanTree {
+    public static void main(String[] args) {
+        int arr[] = {13, 7, 8, 3, 29, 6, 1};
+        Node root = createHuffmanTree(arr);
+        System.out.println(root.value);
+        System.out.println();
+        preOrder(root);
+
+    }
+
+
+    public static Node createHuffmanTree(int[] arr) {
+        // 第一步为了操作方便
+        // 遍历array数组
+        // 将arr的每个元素构建成一个Node
+        // 将node放入到ArrayList
+
+        List<Node> nodes = new ArrayList<>();
+
+        for (int value : arr) {
+            nodes.add(new Node(value));
+        }
+
+
+        while (nodes.size() > 1) {
+            // 排序
+            Collections.sort(nodes);
+//        System.out.println(nodes);
+            // 取出权值最小的两个数
+            Node left = nodes.get(0);
+            Node right = nodes.get(1);
+
+            // 构建一颗新的二叉树
+            Node parent = new Node(left.value + right.value);
+            parent.left = left;
+            parent.right = right;
+
+            nodes.remove(left);
+            nodes.remove(right);
+
+            nodes.add(parent);
+        }
+
+
+        return nodes.get(0);
+    }
+
+    public static void preOrder(Node node) {
+        if (node == null) {
+            System.out.println("空树");
+        } else {
+            node.preOrder();
+        }
+    }
+
+}
+
+
+// 创建节点类
+// 为了让node 对象持续排序
+class Node implements Comparable<Node> {
+    int value;
+    Node left;
+    Node right;
+
+
+    public Node(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return this.value - o.value;
+    }
+
+    // 写一个前序遍历
+    public void preOrder() {
+        System.out.println(this);
+
+        if (this.left != null) {
+            this.left.preOrder();
+        }
+
+        if (this.right != null) {
+            this.right.preOrder();
+        }
+    }
+
+}
+
+```
+
 
 
 ### 红黑树
@@ -2277,7 +2514,7 @@ B-树是另外一种多叉树，专门用于外部存储中来组织数据（磁
 
 简单的说,非叶节点的子节点树总是比它含有的数据项多1,叶节点可能含有一个,两个或三个数据项.空叶节点不存在.2-3-4树的规则如下:      1、第一个子节点的关键字值小于父节点第一个数据项      2、第二个子节点的关键字值小于父节点第二个数据项并大于第一个数据项      3、第三个子节点的关键字值小于父节点第三个数据项并大于第二个数据项      4、最后一个节点的关键字值大于父节点第三个数据项 
 
-### 插入
+#### 插入
 
 （**1）如果2-3-4树中已存在当前插入的key，则插入失败，否则最终一定是在叶子节点中进行插入操作**
 
@@ -2287,7 +2524,7 @@ B-树是另外一种多叉树，专门用于外部存储中来组织数据（磁
 
    如果是在**4节点中进行插入，每次插入会多出一个分支，如果插入操作导致根节点分裂，则2-3-4树会生长一层。**
 
-### 删除
+#### 删除
 
 （**1）如果2-3-4树中不存在当前需要删除的key，则删除失败。**
 
@@ -2432,7 +2669,7 @@ public class Tree234 {
 
 ### B-树
 
-### 插入
+#### 插入
 
 其实**B-树的插入是很简单的，它主要是分为如下的两个步骤：**
 

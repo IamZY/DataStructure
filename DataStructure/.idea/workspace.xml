@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a793111e-dd69-47c2-a7e0-15233c603c32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/ArrayBinaryTreeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/huffmantree/HuffmanTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/BTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/BTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/BinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/HeroNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/HeroNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/BTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/BTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/HeroNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/HeroNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadedBinaryTreeDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreadedBinaryTreeDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="209" column="5" lean-forward="true" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+            <state relative-caret-position="556">
+              <caret line="169" column="23" lean-forward="true" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
               <folding>
                 <element signature="e#279#280#0" expanded="true" />
                 <element signature="e#306#307#0" expanded="true" />
@@ -128,6 +128,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="HeapSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HuffmanTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/huffmantree/HuffmanTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -149,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ntuzy/List/SingleLinkTest.java" />
-        <option value="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/List/DoubleLinkedTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/List/SortedLinkTest.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/NumberTest.java" />
@@ -200,6 +223,8 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/tree/ThreadedBinaryTreeDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/tree/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/tree/huffmantree/HuffmanTree.java" />
       </list>
     </option>
   </component>
@@ -213,8 +238,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="45" />
+    <option name="x" value="-6" />
+    <option name="y" value="76" />
     <option name="width" value="2200" />
     <option name="height" value="1334" />
   </component>
@@ -267,26 +292,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
               <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="threadedbinarytree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="threadedbinarytree" type="462c0819:PsiDirectoryNode" />
-              <item name="ThreadedBinaryTreeDemo.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ntuzy" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="BinaryTree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="huffmantree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,7 +304,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="getter&#9;ACTION&#9;GenerateGetterAndSetter&#10;constr&#9;ACTION&#9;GenerateConstructor&#10;toString&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;cons&#9;ACTION&#9;GenerateConstructor&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter" />
+    <property name="SearchEverywhereHistoryKey" value="tos&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;cons&#9;ACTION&#9;GenerateConstructor&#10;getter&#9;ACTION&#9;GenerateGetterAndSetter&#10;constr&#9;ACTION&#9;GenerateConstructor&#10;toString&#9;ACTION&#9;Actions.ActionsPlugin.GenerateToString&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Algorithms" />
@@ -324,7 +330,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadedBinaryTreeDemo">
+  <component name="RunManager" selected="Application.HuffmanTree">
     <configuration name="ArrayBinaryTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.tree.ArrayBinaryTreeDemo" />
       <module name="DataStructure" />
@@ -345,12 +351,22 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="HashTabDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.hashtab.HashTabDemo" />
+    <configuration name="HeapSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.tree.HeapSort" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ntuzy.hashtab.*" />
+          <option name="PATTERN" value="com.ntuzy.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="HuffmanTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.tree.huffmantree.HuffmanTree" />
+      <module name="DataStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ntuzy.tree.huffmantree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -365,30 +381,20 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TreeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.tree.TreeMain" />
-      <module name="DataStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ntuzy.tree.threadedbinarytree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <list>
-      <item itemvalue="Application.HashTabDemo" />
-      <item itemvalue="Application.TreeMain" />
       <item itemvalue="Application.BinaryTree" />
       <item itemvalue="Application.ArrayBinaryTreeDemo" />
       <item itemvalue="Application.ThreadedBinaryTreeDemo" />
+      <item itemvalue="Application.HeapSort" />
+      <item itemvalue="Application.HuffmanTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HuffmanTree" />
+        <item itemvalue="Application.HeapSort" />
         <item itemvalue="Application.ThreadedBinaryTreeDemo" />
         <item itemvalue="Application.ArrayBinaryTreeDemo" />
         <item itemvalue="Application.BinaryTree" />
-        <item itemvalue="Application.TreeMain" />
-        <item itemvalue="Application.HashTabDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -422,15 +428,15 @@
       <workItem from="1580954285345" duration="598000" />
       <workItem from="1581214327731" duration="11517000" />
       <workItem from="1581298124544" duration="14937000" />
-      <workItem from="1581385998610" duration="5852000" />
+      <workItem from="1581385998610" duration="12712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161023000" />
+    <option name="totallyTimeSpent" value="167883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="45" width="2200" height="1334" extended-state="0" />
+    <frame x="-6" y="76" width="2200" height="1334" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -443,7 +449,7 @@
       <window_info anchor="right" id="Maven Projects" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30964053" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30964053" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
@@ -454,7 +460,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2982026" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2982026" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -562,9 +568,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java</url>
           <line>25</line>
           <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/ntuzy/MergeSorted.java</url>
@@ -575,24 +593,10 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/ChangeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/MergeSorted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/sort/HeapSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -967,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="209" column="5" lean-forward="true" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+        <state relative-caret-position="556">
+          <caret line="169" column="23" lean-forward="true" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
           <folding>
             <element signature="e#279#280#0" expanded="true" />
             <element signature="e#306#307#0" expanded="true" />
@@ -1000,6 +1004,27 @@
             <element signature="e#789#790#0" expanded="true" />
             <element signature="e#833#834#0" expanded="true" />
             <element signature="e#867#868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/HeapSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/tree/huffmantree/HuffmanTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
           </folding>
         </state>
       </provider>
