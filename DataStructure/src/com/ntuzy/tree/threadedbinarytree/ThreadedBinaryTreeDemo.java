@@ -1,50 +1,42 @@
-package com.ntuzy.tree;
+package com.ntuzy.tree.threadedbinarytree;
 
 /**
  * @Author IamZY
- * @create 2020/2/10 14:46
+ * @create 2020/2/11 10:52
  */
-public class BinaryTree {
-
-
+public class ThreadedBinaryTreeDemo {
     public static void main(String[] args) {
 
-        BTree binaryTree = new BTree();
-
         HeroNode root = new HeroNode(1, "1");
-        HeroNode node2 = new HeroNode(2, "2");
-        HeroNode node3 = new HeroNode(3, "3");
-        HeroNode node4 = new HeroNode(4, "4");
-        HeroNode node5 = new HeroNode(5, "5");
-
+        HeroNode node2 = new HeroNode(3, "2");
+        HeroNode node3 = new HeroNode(8, "3");
+        HeroNode node4 = new HeroNode(10, "4");
+        HeroNode node5 = new HeroNode(6, "5");
+        HeroNode node6 = new HeroNode(14, "5");
 
         root.setLeft(node2);
-        root.setRight(node3);
-        node3.setRight(node4);
-        node3.setLeft(node5);
-        binaryTree.setRoot(root);
+        root.setRight(node5);
+        node2.setLeft(node3);
+        node2.setRight(node4);
+        node5.setLeft(node6);
 
-//        binaryTree.preOrder();
-//        System.out.println();
-//        binaryTree.infixOrder();
-//        System.out.println();
-//        binaryTree.postOrder();
+        BTree bTree = new BTree();
+        bTree.setRoot(root);
 
+        bTree.threadedNodes();
 
-        binaryTree.preOrder();
-        binaryTree.delNode(5);
-        System.out.println();
-        binaryTree.preOrder();
-
+        System.out.println(node3.getLeft());
+        System.out.println(node3.getRight());
 
     }
-
 }
-
 
 class BTree {
 
     private HeroNode root;
+    // 实现线索化 指向指向当前节点的前驱节点的指针
+    // 在递归进行线索化时
+    private HeroNode pre = null;
 
     public HeroNode getRoot() {
         return root;
@@ -52,6 +44,43 @@ class BTree {
 
     public void setRoot(HeroNode root) {
         this.root = root;
+    }
+
+    public void threadedNodes() {
+        this.threadedNodes(this.root);
+    }
+
+    // 编写对二叉树进行中序线索化的方法
+    public void threadedNodes(HeroNode node) {
+        // 如果node == null 不能线索化
+        if (node == null) {
+            return;
+        }
+
+        // 先线索化左子树
+        threadedNodes(node.getLeft());
+        // 再线索化当前节点
+
+        // 处理当前节点的前驱节点
+        if (node.getLeft() == null) {
+            // 让当前节点的做指针指向前驱节点
+            node.setLeft(pre);
+            node.setLeftType(1);
+        }
+
+        // 处理后继节点
+        if (pre != null && pre.getRight() == null) {
+            pre.setRight(node);
+            pre.setRightType(1);
+        }
+
+        // 每处理一个节点后 让当前节点指向下一个节点的前驱节点
+        pre = node;
+
+        // 最后线索化右子树
+        threadedNodes(node.getRight());
+
+
     }
 
 
@@ -116,19 +145,40 @@ class BTree {
                 root.delNode(no);
             }
         } else {
-            throw  new RuntimeException("空树");
+            throw new RuntimeException("空树");
         }
     }
 
 
 }
 
-
 class HeroNode {
     private int no;
     private String name;
     private HeroNode left;
     private HeroNode right;
+
+
+    // 如果leftType == 0 指向左子树  == 1 指向前驱结点
+    // 如果rightType == 1 指向右子树 == 1 指向后继节点
+    private int leftType;
+    private int rightType;
+
+    public int getLeftType() {
+        return leftType;
+    }
+
+    public void setLeftType(int leftType) {
+        this.leftType = leftType;
+    }
+
+    public int getRightType() {
+        return rightType;
+    }
+
+    public void setRightType(int rightType) {
+        this.rightType = rightType;
+    }
 
     public HeroNode(int no, String name) {
         this.no = no;
