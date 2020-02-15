@@ -2897,6 +2897,139 @@ class Node implements Comparable<Node> {
 }
 ```
 
+### 二叉排序树
+
+二叉排序树：BST: (Binary Sort(Search) Tree), 对于二叉排序树的任何一个非叶子节点，要求左子节点的值比当前节点的值小，右子节点的值比当前节点的值大。
+
+**特别说明**：如果有相同的值，可以将该节点放在左子节点或右子节点
+
+比如针对前面的数据 (7, 3, 10, 12, 5, 1, 9) ，对应的二叉排序树为：
+
+![image-20200215194000706](images/image-20200215194000706.png)
+
++ 添加
+
+  ```java
+  package com.ntuzy.tree.binarysorttree;
+  
+  /**
+   * @Author IamZY
+   * @create 2020/2/15 19:43
+   */
+  public class BinarySortTreeDemo {
+      public static void main(String[] args) {
+          int[] arr = {7, 3, 10, 12, 5, 1, 9};
+          BinarySortTree binarySortTree = new BinarySortTree();
+          // 循环的添加节点到二叉排序树
+          for (int i = 0; i < arr.length; i++) {
+              binarySortTree.add(new Node(arr[i]));
+          }
+  
+          binarySortTree.infixOrder();
+  
+          
+  
+      }
+  }
+  
+  // 创建二叉排序树
+  class BinarySortTree {
+      private Node root;
+  
+      public void add(Node node) {
+          if (node == null) {
+              return;
+          }
+  
+          if (root == null) {
+              root = node;
+          } else {
+              root.add(node);
+          }
+      }
+  
+  
+      public void infixOrder() {
+          if (root == null) {
+              return;
+          } else {
+              root.infixOrder();
+          }
+      }
+  
+  
+  }
+  
+  
+  class Node {
+      int value;
+      Node left;
+      Node right;
+  
+      public Node(int value) {
+          this.value = value;
+      }
+  
+      // 添加节点
+      public void add(Node node) {
+          if (node == null) {
+              return;
+          }
+  
+  
+          if (node.value < this.value) {
+              if (this.left == null) {
+                  this.left = node;
+              } else {
+                  this.left.add(node);
+              }
+          } else {
+              if (this.right == null) {
+                  this.right = node;
+              } else {
+                  this.right.add(node);
+              }
+          }
+  
+      }
+  
+      @Override
+      public String toString() {
+          return "Node{" +
+                  "value=" + value +
+                  '}';
+      }
+  
+      public void infixOrder() {
+          if (this == null) {
+              return;
+          }
+  
+  
+          if (this.left != null) {
+              this.left.infixOrder();
+          }
+  
+          System.out.println(this);
+  
+          if (this.right != null) {
+              this.right.infixOrder();
+          }
+  
+      }
+  
+  
+  }
+  ```
+
++ 删除
+
+  ![image-20200215201131317](images/image-20200215201131317.png)
+
+  
+
+
+
 
 
 ### 红黑树
