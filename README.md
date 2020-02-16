@@ -3028,9 +3028,253 @@ class Node implements Comparable<Node> {
 
   
 
+```java
+package com.ntuzy.tree.binarysorttree;
+
+/**
+ * @Author IamZY
+ * @create 2020/2/15 19:43
+ */
+public class BinarySortTreeDemo {
+    public static void main(String[] args) {
+        int[] arr = {7, 3, 10, 12, 5, 1, 9};
+        BinarySortTree binarySortTree = new BinarySortTree();
+        // 循环的添加节点到二叉排序树
+        for (int i = 0; i < arr.length; i++) {
+            binarySortTree.add(new Node(arr[i]));
+        }
+
+        binarySortTree.infixOrder();
 
 
+    }
+}
 
+// 创建二叉排序树
+class BinarySortTree {
+    private Node root;
+
+    // 查找要删除的节点
+    public Node search(int target) {
+        if (root == null) {
+            return null;
+        } else {
+            return root.search(target);
+        }
+    }
+
+    public Node searchParent(int target) {
+        if (root == null) {
+            return null;
+        } else {
+            return root.searchParent(target);
+        }
+    }
+
+
+    /**
+     * @param node 二叉排序树的根节点
+     * @return
+     */
+    public int delRightTreeMin(Node node) {
+        Node target = node;
+
+        while (target.left != null) {
+            target = target.left;
+        }
+
+        // 这时 target指向最小节点
+        // 删除最小节点
+        delNode(target.value);
+        return target.value;
+    }
+
+
+    // 删除节点
+    public void delNode(int value) {
+        if (root == null) {
+            return;
+        } else {
+            Node targetNode = search(value);
+            if (targetNode == null) {
+                return;
+            }
+
+            // 如果我们发现targetNode没有父节点
+            if (root.left == null && root.right == null) {
+                root = null;
+                return;
+            }
+
+            // 去找到targetNode的父节点
+            Node parent = searchParent(value);
+
+
+            // 第一种情况
+            if (targetNode.left == null && targetNode.right == null) {
+                //
+                if (parent.left != null && parent.left.value == value) {
+                    parent.left = null;
+                }
+
+                if (parent.right != null && parent.right.value == value) {
+                    parent.right = null;
+                }
+
+            } else if (targetNode.left != null && targetNode.right != null) {  // 第三种情况
+                int minVal = delRightTreeMin(targetNode.right);
+                targetNode.value = minVal;
+            } else {
+
+                if (targetNode.left != null) {
+                    if (parent.left.value == value) {
+                        parent.left = targetNode.left;
+                    } else {
+                        parent.right = targetNode.left;
+                    }
+                } else {
+                    if (parent.left.value == value) {
+                        parent.left = targetNode.right;
+                    } else {
+                        parent.right = targetNode.right;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+    public void add(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        if (root == null) {
+            root = node;
+        } else {
+            root.add(node);
+        }
+    }
+
+
+    public void infixOrder() {
+        if (root == null) {
+            return;
+        } else {
+            root.infixOrder();
+        }
+    }
+
+
+}
+
+
+class Node {
+    int value;
+    Node left;
+    Node right;
+
+    public Node(int value) {
+        this.value = value;
+    }
+
+    // 添加节点
+    public void add(Node node) {
+        if (node == null) {
+            return;
+        }
+
+
+        if (node.value < this.value) {
+            if (this.left == null) {
+                this.left = node;
+            } else {
+                this.left.add(node);
+            }
+        } else {
+            if (this.right == null) {
+                this.right = node;
+            } else {
+                this.right.add(node);
+            }
+        }
+
+    }
+
+
+    // 查找要删除节点的父节点
+    public Node searchParent(int target) {
+        if ((this.left != null && this.value == target) || (this.right != null && this.value == target)) {
+            return this;
+        } else {
+            if (target < this.value && this.left != null) {
+                return this.left.searchParent(target);
+            } else if (target >= this.value && this.right != null) {
+                return this.right.searchParent(target);
+            } else {
+                return null;
+            }
+        }
+    }
+
+
+    // 查找找删除的节点
+    public Node search(int target) {
+        if (value == target) {
+            return this;
+        } else if (target < this.value) {
+            if (this.left != null) {
+                return this.left.search(target);
+            } else {
+                return null;
+            }
+        } else {
+            if (this.right != null) {
+                return this.right.search(target);
+            } else {
+                return null;
+            }
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                '}';
+    }
+
+    public void infixOrder() {
+        if (this == null) {
+            return;
+        }
+
+
+        if (this.left != null) {
+            this.left.infixOrder();
+        }
+
+        System.out.println(this);
+
+        if (this.right != null) {
+            this.right.infixOrder();
+        }
+
+    }
+
+
+}
+
+```
+
+### 平衡二叉树
+
++ 平衡二叉树也叫平衡二叉搜索树（Self-balancing binary search tree）又被称为AVL树， 可以**保证查询效率较高**。
++ 具有以下**特点**：它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。平衡二叉树的常用实现方法有[红黑树](https://baike.baidu.com/item/红黑树/2413209)、[AVL](https://baike.baidu.com/item/AVL/7543015)、[替罪羊树](https://baike.baidu.com/item/替罪羊树/13859070)、[Treap](https://baike.baidu.com/item/Treap)、[伸展树](https://baike.baidu.com/item/伸展树/7003945)等。
++ 举例说明, 看看下面哪些AVL树, 为什么?
 
 ### 红黑树
 
@@ -3227,7 +3471,26 @@ public class Tree234 {
 
 2-3**树的节点分裂过程与2-3-4树大有不同，这里不再做过多介绍，有兴趣的同学可以作为拓展知识从网上进行搜索学习。**
 
-### B-树
+### B+树
+
+![image-20200216164154547](images/image-20200216164154547.png)
+
++ B+树的搜索与B树也基本相同，区别是B+树只有达到叶子结点才命中（B树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找
++ 所有**关键字都出现在叶子结点的链表中**（即数据只能在叶子节点【也叫稠密索引】），且链表中的关键字(数据)恰好是有序的。
++ 不可能在非叶子结点命中
++ 非叶子结点相当于是叶子结点的索引（稀疏索引），叶子结点相当于是存储（关键字）数据的数据层
++ 更适合文件索引系统
++ B树和B+树各有自己的应用场景，不能说B+树**完全比**B树好，反之亦然.
+
+### B树
+
+![image-20200216163703725](images/image-20200216163703725.png)
+
++ B树的阶：节点的最多子节点个数。比如2-3树的阶是3，2-3-4树的阶是4
++ B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点
++ 关键字集合分布在整颗树中, 即叶子节点和非叶子节点都存放数据.
++ 搜索有可能在非叶子结点结束
++ 其搜索性能等价于在关键字全集内做一次二分查找
 
 #### 插入
 
@@ -3236,6 +3499,12 @@ public class Tree234 {
   1. 使用之前介绍的查找算法查找出关键字的插入位置，如果我们在**B-树中查找到了关键字，则直接返回。**
 
   2**.然后，我就需要判断那个终端结点上的关键字数量是否满足：n<=m-1,如果满足的话，就直接在该终端结点上添加一个关键字，否则我们就需要产生结点的“分裂”。 分裂的方法是：生成一新结点。把原结点上的关键字和k（需要插入的值）按升序排序后，从中间位置把关键字（不包括中间位置的关键字）分成两部分。左部分所含关键字放在旧结点中，右部分所含关键字放在新结点中，中间位置的关键字连同新结点的存储位置插入到父结点中。如果父结点的关键字个数也超过（m-1），则要再分裂，再往上插。直至这个过程传到根结点为止。**
+
+### B*
+
+B*树是B+树的变体，在B+树的非根和非叶子结点再增加指向兄弟的指针。
+
+![image-20200216164909576](images/image-20200216164909576.png)
 
 ## 哈希表
 

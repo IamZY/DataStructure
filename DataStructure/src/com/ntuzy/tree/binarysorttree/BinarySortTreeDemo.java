@@ -23,6 +23,98 @@ public class BinarySortTreeDemo {
 class BinarySortTree {
     private Node root;
 
+    // 查找要删除的节点
+    public Node search(int target) {
+        if (root == null) {
+            return null;
+        } else {
+            return root.search(target);
+        }
+    }
+
+    public Node searchParent(int target) {
+        if (root == null) {
+            return null;
+        } else {
+            return root.searchParent(target);
+        }
+    }
+
+
+    /**
+     * @param node 二叉排序树的根节点
+     * @return
+     */
+    public int delRightTreeMin(Node node) {
+        Node target = node;
+
+        while (target.left != null) {
+            target = target.left;
+        }
+
+        // 这时 target指向最小节点
+        // 删除最小节点
+        delNode(target.value);
+        return target.value;
+    }
+
+
+    // 删除节点
+    public void delNode(int value) {
+        if (root == null) {
+            return;
+        } else {
+            Node targetNode = search(value);
+            if (targetNode == null) {
+                return;
+            }
+
+            // 如果我们发现targetNode没有父节点
+            if (root.left == null && root.right == null) {
+                root = null;
+                return;
+            }
+
+            // 去找到targetNode的父节点
+            Node parent = searchParent(value);
+
+
+            // 第一种情况
+            if (targetNode.left == null && targetNode.right == null) {
+                //
+                if (parent.left != null && parent.left.value == value) {
+                    parent.left = null;
+                }
+
+                if (parent.right != null && parent.right.value == value) {
+                    parent.right = null;
+                }
+
+            } else if (targetNode.left != null && targetNode.right != null) {  // 第三种情况
+                int minVal = delRightTreeMin(targetNode.right);
+                targetNode.value = minVal;
+            } else {
+
+                if (targetNode.left != null) {
+                    if (parent.left.value == value) {
+                        parent.left = targetNode.left;
+                    } else {
+                        parent.right = targetNode.left;
+                    }
+                } else {
+                    if (parent.left.value == value) {
+                        parent.left = targetNode.right;
+                    } else {
+                        parent.right = targetNode.right;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
     public void add(Node node) {
         if (node == null) {
             return;
